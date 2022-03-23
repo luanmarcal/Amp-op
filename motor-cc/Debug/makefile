@@ -60,8 +60,8 @@ all: main-build
 main-build: motor-cc.elf secondary-outputs
 
 # Tool invocations
-motor-cc.elf: $(OBJS) $(USER_OBJS) /home/lucas/Documentos/Microcontroladores/Atividades/Projeto\ Amp-op/motor-cc/STM32G0B1RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "motor-cc.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"/home/lucas/Documentos/Microcontroladores/Atividades/Projeto Amp-op/motor-cc/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="motor-cc.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+motor-cc.elf: $(OBJS) $(USER_OBJS) /home/lucas/Documentos/Repositorios/Amp-op/motor-cc/STM32G0B1RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "motor-cc.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"/home/lucas/Documentos/Repositorios/Amp-op/motor-cc/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="motor-cc.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

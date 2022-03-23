@@ -1,8 +1,9 @@
 main.c:64:6:PWM_Set_DC	32	static
 main.c:75:6:HAL_GPIO_EXTI_Falling_Callback	16	static
-main.c:89:5:main	8	static
-main.c:169:6:SystemClock_Config	96	static
-main.c:214:13:MX_ADC1_Init	24	static
-main.c:271:13:MX_TIM2_Init	64	static
-main.c:330:13:MX_GPIO_Init	48	static
-main.c:358:6:Error_Handler	8	static,ignoring_inline_asm
+main.c:83:7:calcTensao	24	static
+main.c:94:5:main	24	static
+main.c:191:6:SystemClock_Config	96	static
+main.c:236:13:MX_ADC1_Init	24	static
+main.c:293:13:MX_TIM2_Init	64	static
+main.c:352:13:MX_GPIO_Init	48	static
+main.c:380:6:Error_Handler	8	static,ignoring_inline_asm

@@ -45,8 +45,8 @@ TIM_HandleTypeDef htim2;
 
 /* USER CODE BEGIN PV */
 uint8_t contador;
-uint8_t e_analogica;
-float tensao;
+uint32_t e_analogica, ADmax;
+float tensao, media=0, corrente;
 
 /* USER CODE END PV */
 
@@ -78,6 +78,11 @@ void HAL_GPIO_EXTI_Falling_Callback(uint16_t GPIO_Pin){
 	  if(contador > 5){
 		  contador = 1;
 	  }
+}
+
+float calcTensao(uint16_t num){
+	float temp = (3.3 * (num / 4095.0));
+	return temp;
 }
 
 /* USER CODE END 0 */
@@ -113,10 +118,11 @@ int main(void)
   MX_TIM2_Init();
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
-
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
 
   PWM_Set_DC(&htim2, TIM_CHANNEL_1, 0);
+
+  ADC_ChannelConfTypeDef sConfig = {0};
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -126,19 +132,35 @@ int main(void)
   while (1)
   {
 
-	  HAL_ADC_Start(&hadc1);
-	  HAL_ADC_PollForConversion(&hadc1, 100);
-	  e_analogica = HAL_ADC_GetValue(&hadc1);
+	  sConfig.Channel = ADC_CHANNEL_1;
+	  HAL_ADC_ConfigChannel(&hadc1, &sConfig);
 
-	  tensao = e_analogica * (3.3/4095.0);
+	  e_analogica = 0;
+	  for(int i = 0; i < 250; i++){
+
+		  HAL_ADC_Start(&hadc1);
+		  HAL_ADC_PollForConversion(&hadc1, 100);
+		  e_analogica += HAL_ADC_GetValue(&hadc1);
+
+	  }
+
+	  e_analogica /= 250;
+	  ADmax = e_analogica;
+
+	  tensao = calcTensao(e_analogica);
+
+
+	  corrente = (0.027 * e_analogica) / 3500.0;
+
+
 
 	  switch(contador){
 	  	case 1:
-	  		PWM_Set_DC(&htim2, TIM_CHANNEL_1, 10);
+	  		PWM_Set_DC(&htim2, TIM_CHANNEL_1, 0);
 	  		break;
 
 	  	case 2:
-	  		PWM_Set_DC(&htim2, TIM_CHANNEL_1, 26);
+	  		PWM_Set_DC(&htim2, TIM_CHANNEL_1, 30);
 	  		break;
 
 	  	case 3:
@@ -233,7 +255,7 @@ static void MX_ADC1_Init(void)
   hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
   hadc1.Init.LowPowerAutoWait = DISABLE;
   hadc1.Init.LowPowerAutoPowerOff = DISABLE;
-  hadc1.Init.ContinuousConvMode = ENABLE;
+  hadc1.Init.ContinuousConvMode = DISABLE;
   hadc1.Init.NbrOfConversion = 1;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
   hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;

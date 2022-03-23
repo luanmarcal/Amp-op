@@ -1,7 +1,10 @@
 #MicroXplorer Configuration settings - do not modify
 ADC1.Channel-4\#ChannelRegularConversion=ADC_CHANNEL_1
-ADC1.ContinuousConvMode=ENABLE
-ADC1.IPParameters=Rank-4\#ChannelRegularConversion,master,Channel-4\#ChannelRegularConversion,SelectedChannel,SamplingTime-4\#ChannelRegularConversion,NbrOfConversionFlag,ContinuousConvMode,SamplingTimeCommon1,SamplingTimeCommon2,NbrOfConversion
+ADC1.ContinuousConvMode=DISABLE
+ADC1.DMAContinuousRequests=DISABLE
+ADC1.DiscontinuousConvMode=DISABLE
+ADC1.EOCSelection=ADC_EOC_SINGLE_CONV
+ADC1.IPParameters=Rank-4\#ChannelRegularConversion,Channel-4\#ChannelRegularConversion,SamplingTime-4\#ChannelRegularConversion,NbrOfConversionFlag,ContinuousConvMode,SamplingTimeCommon1,SamplingTimeCommon2,NbrOfConversion,DiscontinuousConvMode,DMAContinuousRequests,EOCSelection,master,SelectedChannel
 ADC1.NbrOfConversion=1
 ADC1.NbrOfConversionFlag=1
 ADC1.Rank-4\#ChannelRegularConversion=1
@@ -36,7 +39,6 @@ Mcu.UserConstants=
 Mcu.UserName=STM32G0B1RETx
 MxCube.Version=6.4.0
 MxDb.Version=DB.6.0.40
-NVIC.ADC1_COMP_IRQn=true\:0\:0\:false\:false\:true\:true\:true
 NVIC.EXTI4_15_IRQn=true\:0\:0\:false\:false\:true\:true\:true
 NVIC.ForceEnableDMAVector=true
 NVIC.HardFault_IRQn=true\:0\:0\:false\:false\:true\:false\:false
