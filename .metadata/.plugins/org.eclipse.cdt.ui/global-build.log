@@ -163,3 +163,10 @@ Finished building: motor-cc.bin
  
 Finished building: motor-cc.list
  
+13:49:34 **** Incremental Build of configuration Debug for project motor-cc ****
+make -j8 all 
+arm-none-eabi-size   motor-cc.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20300	     20	   1764	  22084	   5644	motor-cc.elf
+Finished building: default.size.stdout
+ 
