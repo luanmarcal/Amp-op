@@ -1,6 +1,8 @@
 stm32g0xx_hal_msp.c:65:6:HAL_MspInit	16	static
 stm32g0xx_hal_msp.c:91:6:HAL_ADC_MspInit	128	static
 stm32g0xx_hal_msp.c:134:6:HAL_ADC_MspDeInit	16	static
-stm32g0xx_hal_msp.c:162:6:HAL_TIM_Base_MspInit	24	static
-stm32g0xx_hal_msp.c:181:6:HAL_TIM_MspPostInit	48	static
-stm32g0xx_hal_msp.c:213:6:HAL_TIM_Base_MspDeInit	16	static
+stm32g0xx_hal_msp.c:162:6:HAL_SPI_MspInit	56	static
+stm32g0xx_hal_msp.c:207:6:HAL_SPI_MspDeInit	16	static
+stm32g0xx_hal_msp.c:239:6:HAL_TIM_Base_MspInit	24	static
+stm32g0xx_hal_msp.c:258:6:HAL_TIM_MspPostInit	48	static
+stm32g0xx_hal_msp.c:290:6:HAL_TIM_Base_MspDeInit	16	static
