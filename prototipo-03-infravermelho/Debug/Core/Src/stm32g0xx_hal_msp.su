@@ -1,0 +1,5 @@
+stm32g0xx_hal_msp.c:63:6:HAL_MspInit	16	static
+stm32g0xx_hal_msp.c:89:6:HAL_TIM_Base_MspInit	104	static
+stm32g0xx_hal_msp.c:121:6:HAL_TIM_Base_MspDeInit	16	static
+stm32g0xx_hal_msp.c:143:6:HAL_IRDA_MspInit	128	static
+stm32g0xx_hal_msp.c:189:6:HAL_IRDA_MspDeInit	16	static
