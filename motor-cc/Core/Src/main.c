@@ -22,6 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdint.h>
+#include <LoRa.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,6 +47,14 @@ SPI_HandleTypeDef hspi1;
 TIM_HandleTypeDef htim2;
 
 /* USER CODE BEGIN PV */
+LoRa myLoRa;
+uint8_t read_data[128];
+uint8_t send_data[128];
+int			RSSI;
+uint16_t teste;
+uint8_t received_data[10];
+uint8_t packet_size = 0;
+
 uint8_t contador;
 uint32_t e_analogica, ADmax;
 float tensao, media=0, corrente;
@@ -122,6 +131,30 @@ int main(void)
   MX_ADC1_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
+  myLoRa = newLoRa();
+
+    	myLoRa.hSPIx                 = &hspi1;
+    	myLoRa.CS_port               = NSS_GPIO_Port;
+    	myLoRa.CS_pin                = NSS_Pin;
+    	myLoRa.reset_port            = RESET_GPIO_Port;
+    	myLoRa.reset_pin             = RESET_Pin;
+    	myLoRa.DIO0_port						 = DIO0_GPIO_Port;
+    	myLoRa.DIO0_pin							 = DIO0_Pin;
+
+    	myLoRa.frequency             = 433;							  // default = 433 MHz
+    	myLoRa.spredingFactor        = SF_7;							// default = SF_7
+    	myLoRa.bandWidth			       = BW_125KHz;				  // default = BW_125KHz
+    	myLoRa.crcRate				       = CR_4_5;						// default = CR_4_5
+    	myLoRa.power					       = POWER_20db;				// default = 20db
+    	myLoRa.overCurrentProtection = 120; 							// default = 100 mA
+    	myLoRa.preamble				       = 10;		  					// default = 8;
+
+
+    	teste=LoRa_init(&myLoRa);
+
+    	LoRa_startReceiving(&myLoRa);
+
+
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
 
   PWM_Set_DC(&htim2, TIM_CHANNEL_1, 0);
@@ -135,6 +168,9 @@ int main(void)
 
   while (1)
   {
+
+	  packet_size = LoRa_receive(&myLoRa, received_data, 10);
+	  HAL_Delay(500);
 
 	  sConfig.Channel = ADC_CHANNEL_9;
 	  HAL_ADC_ConfigChannel(&hadc1, &sConfig);
@@ -403,7 +439,10 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, LED_Pin|NSS_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(NSS_GPIO_Port, NSS_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOC, RESET_Pin|DIO0_Pin, GPIO_PIN_RESET);

@@ -5245,3 +5245,42 @@
 2022-03-29 14:31:06,356 [INFO] ProjectBuilder:3832 - Time for Generating toolchain IDE Files: 1064mS.
 2022-03-29 14:31:06,357 [INFO] ProjectBuilder:2461 - Time for Copy CMSIS : 0mS.
 2022-03-29 14:31:06,357 [INFO] ProjectBuilder:2461 - Time for Copy CMSIS : 0mS.
+2022-03-29 15:16:47,342 [INFO] Gpio:254 - dependency for GPIO [ADC1, SPI1, SYS, TIM2]
+2022-03-29 15:17:21,285 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 690759080 Bytes (895483904)
+2022-03-29 15:17:21,434 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 704912808 Bytes (895483904)
+2022-03-29 15:17:21,915 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 742597824 Bytes (895483904)
+2022-03-29 15:17:22,053 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SPI
+2022-03-29 15:17:22,053 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8G0
+2022-03-29 15:17:22,053 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2022-03-29 15:17:22,053 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: ADC
+2022-03-29 15:17:22,053 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2022-03-29 15:17:22,053 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2022-03-29 15:17:22,053 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2022-03-29 15:17:22,053 [INFO] CodeGenerator:663 - code generatio: config db path: /opt/st/stm32cubeide_1.8.0/plugins/com.st.stm32cube.common.mx_6.4.0.202111222105//db/
+2022-03-29 15:17:22,241 [INFO] CodeEngine:239 - oldGeneratedFile, /home/lucas/Documentos/Repositorios/Amp-op/motor-cc/MXTmpFiles/license.tmp_save
+2022-03-29 15:17:22,275 [INFO] CodeEngine:257 - Generated code: /home/lucas/Documentos/Repositorios/Amp-op/motor-cc/MXTmpFiles/license.tmp
+2022-03-29 15:17:22,310 [INFO] CodeEngine:239 - oldGeneratedFile, /home/lucas/Documentos/Repositorios/Amp-op/motor-cc/MXTmpFiles/gpio.tmp_save
+2022-03-29 15:17:22,344 [INFO] CodeEngine:257 - Generated code: /home/lucas/Documentos/Repositorios/Amp-op/motor-cc/MXTmpFiles/gpio.tmp
+2022-03-29 15:17:22,559 [INFO] CodeEngine:239 - oldGeneratedFile, /home/lucas/Documentos/Repositorios/Amp-op/motor-cc/Core/Src/stm32g0xx_it.c_save
+2022-03-29 15:17:22,597 [INFO] CodeEngine:257 - Generated code: /home/lucas/Documentos/Repositorios/Amp-op/motor-cc/Core/Src/stm32g0xx_it.c
+2022-03-29 15:17:22,598 [INFO] CodeEngine:239 - oldGeneratedFile, /home/lucas/Documentos/Repositorios/Amp-op/motor-cc/Core/Inc/stm32g0xx_it.h_save
+2022-03-29 15:17:22,631 [INFO] CodeEngine:257 - Generated code: /home/lucas/Documentos/Repositorios/Amp-op/motor-cc/Core/Inc/stm32g0xx_it.h
+2022-03-29 15:17:22,633 [INFO] CodeEngine:239 - oldGeneratedFile, /home/lucas/Documentos/Repositorios/Amp-op/motor-cc/Core/Src/stm32g0xx_hal_msp.c_save
+2022-03-29 15:17:22,693 [INFO] CodeEngine:257 - Generated code: /home/lucas/Documentos/Repositorios/Amp-op/motor-cc/Core/Src/stm32g0xx_hal_msp.c
+2022-03-29 15:17:22,693 [INFO] CodeEngine:239 - oldGeneratedFile, /home/lucas/Documentos/Repositorios/Amp-op/motor-cc/MXTmpFiles/system.tmp_save
+2022-03-29 15:17:22,726 [INFO] CodeEngine:257 - Generated code: /home/lucas/Documentos/Repositorios/Amp-op/motor-cc/MXTmpFiles/system.tmp
+2022-03-29 15:17:22,727 [INFO] CodeEngine:239 - oldGeneratedFile, /home/lucas/Documentos/Repositorios/Amp-op/motor-cc/Core/Inc/stm32g0xx_hal_conf.h_save
+2022-03-29 15:17:22,762 [INFO] CodeEngine:257 - Generated code: /home/lucas/Documentos/Repositorios/Amp-op/motor-cc/Core/Inc/stm32g0xx_hal_conf.h
+2022-03-29 15:17:22,771 [WARN] IPConfigManager:3151 - IP not found : TIM
+2022-03-29 15:17:22,772 [WARN] CodeGenerator:3358 - IP not found : null
+2022-03-29 15:17:22,773 [INFO] CodeEngine:239 - oldGeneratedFile, /home/lucas/Documentos/Repositorios/Amp-op/motor-cc/Core/Inc/main.h_save
+2022-03-29 15:17:22,808 [INFO] CodeEngine:257 - Generated code: /home/lucas/Documentos/Repositorios/Amp-op/motor-cc/Core/Inc/main.h
+2022-03-29 15:17:22,809 [INFO] CodeEngine:239 - oldGeneratedFile, /home/lucas/Documentos/Repositorios/Amp-op/motor-cc/Core/Src/main.c_save
+2022-03-29 15:17:22,873 [INFO] CodeEngine:257 - Generated code: /home/lucas/Documentos/Repositorios/Amp-op/motor-cc/Core/Src/main.c
+2022-03-29 15:17:23,310 [INFO] ProjectBuilder:2589 - Time for Copy HAL[1] : 11mS.
+2022-03-29 15:17:23,311 [INFO] ProjectBuilder:3665 - Project Generator version: 3.15.2
+2022-03-29 15:17:23,473 [INFO] ConfigFileManager:1273 - The Die is : DIE467
+2022-03-29 15:17:24,516 [INFO] ProjectBuilder:3832 - Time for Generating toolchain IDE Files: 1205mS.
+2022-03-29 15:17:24,516 [INFO] ProjectBuilder:2461 - Time for Copy CMSIS : 0mS.
+2022-03-29 15:17:24,517 [INFO] ProjectBuilder:2461 - Time for Copy CMSIS : 0mS.
+2022-03-29 16:48:25,922 [ERROR] ConfigurationRetriever:139 - IOException on connection: Read timed out
