@@ -1,0 +1,208 @@
+14:43:21 **** Incremental Build of configuration Debug for project LCD2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -I"/home/nicholaspado/Documentos/TESTE/LCD2/Libs/LCD" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:52:14: error: invalid initializer
+   52 | char i[16] = c;
+      |              ^
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:55:03 **** Incremental Build of configuration Debug for project LCD2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -I"/home/nicholaspado/Documentos/TESTE/LCD2/Libs/LCD" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/nicholaspado/Documentos/TESTE/LCD2/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD2.elf
+ 
+arm-none-eabi-size   LCD2.elf 
+arm-none-eabi-objdump -h -S  LCD2.elf  > "LCD2.list"
+arm-none-eabi-objcopy  -O binary  LCD2.elf  "LCD2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   9952	     36	   1708	  11696	   2db0	LCD2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD2.bin
+ 
+Finished building: LCD2.list
+ 
+15:55:23 **** Incremental Build of configuration Debug for project LCD2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -I"/home/nicholaspado/Documentos/TESTE/LCD2/Libs/LCD" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/nicholaspado/Documentos/TESTE/LCD2/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD2.elf
+ 
+arm-none-eabi-size   LCD2.elf 
+arm-none-eabi-objdump -h -S  LCD2.elf  > "LCD2.list"
+arm-none-eabi-objcopy  -O binary  LCD2.elf  "LCD2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   9952	     36	   1708	  11696	   2db0	LCD2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD2.bin
+ 
+Finished building: LCD2.list
+ 
+15:56:21 **** Incremental Build of configuration Debug for project LCD2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -I"/home/nicholaspado/Documentos/TESTE/LCD2/Libs/LCD" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/nicholaspado/Documentos/TESTE/LCD2/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD2.elf
+ 
+arm-none-eabi-size   LCD2.elf 
+arm-none-eabi-objdump -h -S  LCD2.elf  > "LCD2.list"
+arm-none-eabi-objcopy  -O binary  LCD2.elf  "LCD2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   9952	     36	   1708	  11696	   2db0	LCD2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD2.bin
+ 
+Finished building: LCD2.list
+ 
+15:56:43 **** Incremental Build of configuration Debug for project LCD2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -I"/home/nicholaspado/Documentos/TESTE/LCD2/Libs/LCD" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/nicholaspado/Documentos/TESTE/LCD2/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD2.elf
+ 
+arm-none-eabi-size   LCD2.elf 
+arm-none-eabi-objdump -h -S  LCD2.elf  > "LCD2.list"
+arm-none-eabi-objcopy  -O binary  LCD2.elf  "LCD2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   9952	     36	   1708	  11696	   2db0	LCD2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD2.bin
+ 
+Finished building: LCD2.list
+ 
+15:57:00 **** Incremental Build of configuration Debug for project LCD2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -I"/home/nicholaspado/Documentos/TESTE/LCD2/Libs/LCD" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/nicholaspado/Documentos/TESTE/LCD2/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD2.elf
+ 
+arm-none-eabi-size   LCD2.elf 
+arm-none-eabi-objdump -h -S  LCD2.elf  > "LCD2.list"
+arm-none-eabi-objcopy  -O binary  LCD2.elf  "LCD2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   9952	     36	   1708	  11696	   2db0	LCD2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD2.bin
+ 
+Finished building: LCD2.list
+ 
+15:58:41 **** Incremental Build of configuration Debug for project LCD2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -I"/home/nicholaspado/Documentos/TESTE/LCD2/Libs/LCD" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/nicholaspado/Documentos/TESTE/LCD2/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD2.elf
+ 
+arm-none-eabi-size   LCD2.elf 
+arm-none-eabi-objdump -h -S  LCD2.elf  > "LCD2.list"
+arm-none-eabi-objcopy  -O binary  LCD2.elf  "LCD2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   9952	     36	   1708	  11696	   2db0	LCD2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD2.bin
+ 
+Finished building: LCD2.list
+ 
+15:59:08 **** Incremental Build of configuration Debug for project LCD2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -I"/home/nicholaspado/Documentos/TESTE/LCD2/Libs/LCD" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:52:14: warning: initializer-string for array of chars is too long
+   52 | char i[16] = {"zico        gostosa"};
+      |              ^
+arm-none-eabi-gcc -o "LCD2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/nicholaspado/Documentos/TESTE/LCD2/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD2.elf
+ 
+arm-none-eabi-size   LCD2.elf 
+arm-none-eabi-objdump -h -S  LCD2.elf  > "LCD2.list"
+arm-none-eabi-objcopy  -O binary  LCD2.elf  "LCD2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   9952	     36	   1708	  11696	   2db0	LCD2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD2.bin
+ 
+Finished building: LCD2.list
+ 
+15:59:21 **** Incremental Build of configuration Debug for project LCD2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -I"/home/nicholaspado/Documentos/TESTE/LCD2/Libs/LCD" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:52:14: warning: initializer-string for array of chars is too long
+   52 | char i[16] = {"zico      gostosa"};
+      |              ^
+arm-none-eabi-gcc -o "LCD2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/nicholaspado/Documentos/TESTE/LCD2/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD2.elf
+ 
+arm-none-eabi-size   LCD2.elf 
+arm-none-eabi-objdump -h -S  LCD2.elf  > "LCD2.list"
+arm-none-eabi-objcopy  -O binary  LCD2.elf  "LCD2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   9952	     36	   1708	  11696	   2db0	LCD2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD2.bin
+ 
+Finished building: LCD2.list
+ 
+15:59:35 **** Incremental Build of configuration Debug for project LCD2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -I"/home/nicholaspado/Documentos/TESTE/LCD2/Libs/LCD" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/nicholaspado/Documentos/TESTE/LCD2/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD2.elf
+ 
+arm-none-eabi-size   LCD2.elf 
+arm-none-eabi-objdump -h -S  LCD2.elf  > "LCD2.list"
+arm-none-eabi-objcopy  -O binary  LCD2.elf  "LCD2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   9952	     36	   1708	  11696	   2db0	LCD2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD2.bin
+ 
+Finished building: LCD2.list
+ 
+15:59:51 **** Incremental Build of configuration Debug for project LCD2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -I"/home/nicholaspado/Documentos/TESTE/LCD2/Libs/LCD" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/nicholaspado/Documentos/TESTE/LCD2/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD2.elf
+ 
+arm-none-eabi-size   LCD2.elf 
+arm-none-eabi-objdump -h -S  LCD2.elf  > "LCD2.list"
+arm-none-eabi-objcopy  -O binary  LCD2.elf  "LCD2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   9952	     36	   1708	  11696	   2db0	LCD2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD2.bin
+ 
+Finished building: LCD2.list
+ 
+16:00:51 **** Incremental Build of configuration Debug for project LCD2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -I"/home/nicholaspado/Documentos/TESTE/LCD2/Libs/LCD" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/nicholaspado/Documentos/TESTE/LCD2/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD2.elf
+ 
+arm-none-eabi-size   LCD2.elf 
+arm-none-eabi-objdump -h -S  LCD2.elf  > "LCD2.list"
+arm-none-eabi-objcopy  -O binary  LCD2.elf  "LCD2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   9952	     36	   1708	  11696	   2db0	LCD2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD2.bin
+ 
+Finished building: LCD2.list
+ 
+14:31:48 **** Incremental Build of configuration Debug for project LCD2 ****
+make -j8 all 
+arm-none-eabi-size   LCD2.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9952	     36	   1708	  11696	   2db0	LCD2.elf
+Finished building: default.size.stdout
+ 

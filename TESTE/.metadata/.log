@@ -1,0 +1,33 @@
+!SESSION 2022-03-24 14:39:27.197 -----------------------------------------------
+eclipse.buildId=Version 1.8.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-03-24 14:39:37.666
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-03-24 14:39:37.722
+!MESSAGE Log4j initialized with config file /home/nicholaspado/Documentos/TESTE/.metadata/.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-03-24 14:39:41.338
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-03-24 14:39:59.744
+!MESSAGE Indexed 'LCD2' (23 sources, 108 headers) in 3,01 sec: 9.815 declarations; 50.942 references; 3 unresolved inclusions; 26 syntax errors; 171 unresolved names (0,28%)
+!SESSION 2022-03-25 17:22:56.970 -----------------------------------------------
+eclipse.buildId=Version 1.8.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-03-25 17:23:05.649
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-03-25 17:23:05.710
+!MESSAGE Log4j initialized with config file /home/nicholaspado/Documentos/TESTE/.metadata/.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-03-25 17:23:12.065
+!MESSAGE Started RMI Server, listening on port 41337
